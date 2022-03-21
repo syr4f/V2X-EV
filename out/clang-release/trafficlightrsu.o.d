@@ -52,7 +52,6 @@ out/clang-release//trafficlightrsu.o: trafficlightrsu.cc \
   /home/veins/src/veins/src/veins/modules/mobility/traci/TraCIRegionOfInterest.h \
   /home/veins/src/veins/src/veins/modules/mobility/traci/TraCICommandInterface.h \
   /home/veins/src/veins/src/veins/modules/world/traci/trafficLight/TraCITrafficLightProgram.h \
-  /home/veins/src/veins/src/veins/modules/application/traci/MyVeinsApp.h \
   /home/veins/src/veins/src/veins/modules/application/traci/TraCIDemo11pMessage_m.h
 
 trafficlightrsu.h:
@@ -160,7 +159,5 @@ trafficlightrsu.h:
 /home/veins/src/veins/src/veins/modules/mobility/traci/TraCICommandInterface.h:
 
 /home/veins/src/veins/src/veins/modules/world/traci/trafficLight/TraCITrafficLightProgram.h:
-
-/home/veins/src/veins/src/veins/modules/application/traci/MyVeinsApp.h:
 
 /home/veins/src/veins/src/veins/modules/application/traci/TraCIDemo11pMessage_m.h:

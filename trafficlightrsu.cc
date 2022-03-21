@@ -14,20 +14,11 @@
 // 
 
 #include "trafficlightrsu.h"
-#include "veins/modules/application/traci/MyVeinsApp.h"
 #include "veins/modules/application/traci/TraCIDemo11pMessage_m.h"
 
 using namespace veins;
 
 Define_Module(veins::trafficlightrsu);
-
-void trafficlightrsu::onWSA(DemoServiceAdvertisment* wsa)
-{
-    // if this RSU receives a WSA for service 42, it will tune to the channel
-    if (wsa->getPsid() == 42) {
-        mac->changeServiceChannel(static_cast<Channel>(wsa->getTargetChannel()));
-    }
-}
 
 
 void trafficlightrsu::onWSM(BaseFrame1609_4* frame)
@@ -38,7 +29,7 @@ void trafficlightrsu::onWSM(BaseFrame1609_4* frame)
 
     if(laneId == "14617022#0_0"){
 
-        //manager->getCommandInterface()->trafficlight("cluster_144084639_252529291_255540900_6503456532").setPhaseIndex(2);
+        manager->getCommandInterface()->trafficlight("cluster_144084639_252529291_255540900_6503456532").setPhaseIndex(2);
         //traci->trafficlight("cluster_144084639_252529291_255540900_6503456532").setPhaseIndex(2);
 
         }

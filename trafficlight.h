@@ -51,4 +51,3 @@ class trafficlight : public DemoBaseApplLayer {
 };
 
 }
-

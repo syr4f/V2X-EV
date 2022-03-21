@@ -14,6 +14,7 @@
 // 
 
 
+
 #pragma once
 
 #include "veins/modules/application/ieee80211p/DemoBaseApplLayer.h"
@@ -29,7 +30,9 @@ class VEINS_API trafficlightrsu : public DemoBaseApplLayer {
 protected:
     void onWSM(BaseFrame1609_4* wsm) override;
     void onWSA(DemoServiceAdvertisment* wsa) override;
-
+    TraCIMobility* mobility;
+    TraCICommandInterface* traci;
+    TraCICommandInterface::Vehicle* traciVehicle;
     TraCIScenarioManager* manager;
     std::string trafficLightId;
 

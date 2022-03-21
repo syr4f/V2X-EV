@@ -43,18 +43,6 @@ void trafficlight::initialize(int stage)
 
 
 
-void trafficlight::onWSA(DemoServiceAdvertisment* wsa)
-{
-    if (currentSubscribedServiceId == -1) {
-        mac->changeServiceChannel(static_cast<Channel>(wsa->getTargetChannel()));
-        currentSubscribedServiceId = wsa->getPsid();
-        if (currentOfferedServiceId != wsa->getPsid()) {
-            stopService();
-            startService(static_cast<Channel>(wsa->getTargetChannel()), wsa->getPsid(), "Mirrored Traffic Service");
-        }
-    }
-}
-
 void trafficlight::onWSM(BaseFrame1609_4* frame)
 {
     TraCIDemo11pMessage* wsm = check_and_cast<TraCIDemo11pMessage*>(frame);
@@ -119,5 +107,7 @@ void trafficlight::handlePositionUpdate(cObject* obj)
              lastDroveAt = simTime();
              }
          }
+
+
 
 
